@@ -1,0 +1,70 @@
+<html>
+<body style="font-family: monospace;">
+<div style="white-space: pre;background-color: #EEF4ED;">using System;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">using System.Net.Http;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">namespace api.Services</div>
+<div style="white-space: pre;background-color: #EEF4ED;">{</div>
+<div style="white-space: pre;background-color: #EEF4ED;">    public class ExchangeRateService</div>
+<div style="white-space: pre;background-color: #EEF4ED;">    {</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        private static HttpClient _client;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #D2EACE;">        public ExchangeRateService(HttpClient httpClient)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            _client = httpClient;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        </div>
+<div style="white-space: pre;background-color: #D2EACE;">        double sellingPriceBOT = 0;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        public void GetSellingPrice(string date) {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            BotService botService = new BotService(_client);</div>
+<div style="white-space: pre;background-color: #D2EACE;">            sellingPriceBOT = botService.GetSellingAverageDay(date);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        public double ExchangeRate(double inputAmountUSD, string date)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            GetSellingPrice(date);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #D2EACE;">            if (inputAmountUSD &gt;= 1)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            {</div>
+<div style="white-space: pre;background-color: #D2EACE;">                double inputAmount = inputAmountUSD * sellingPriceBOT;</div>
+<div style="white-space: pre;background-color: #D2EACE;">                double fee = _GetFee(inputAmountUSD);</div>
+<div style="white-space: pre;background-color: #D2EACE;">                return CalculateAmountWithFee(inputAmount, fee);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            else</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            {</div>
+<div style="white-space: pre;background-color: #D2EACE;">                return 0;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        public double CalculateAmountWithFee(double inputAmount, double fee)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            double amountWithFee = inputAmount + (inputAmount * fee);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #D2EACE;">            return _RoundCeiling2Digit(amountWithFee);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        public double _GetFee(double inputAmount)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            if (inputAmount &lt;= 100)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            {</div>
+<div style="white-space: pre;background-color: #D2EACE;">                return 0.0250;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            }</div>
+<div style="white-space: pre;background-color: #D2EACE;">            else if (inputAmount &gt; 100 &amp;&amp; inputAmount &lt;= 500)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            {</div>
+<div style="white-space: pre;background-color: #D2EACE;">                return 0.0215;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            else</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            {</div>
+<div style="white-space: pre;background-color: #D2EACE;">                return 0.0200;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">            }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        public double _RoundCeiling2Digit(double number)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            double result = Math.Round(Math.Ceiling(number * 100) / 100, 2, MidpointRounding.AwayFromZero);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #D2EACE;">            return result;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">    }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">}</div>
+</body>
+</html>

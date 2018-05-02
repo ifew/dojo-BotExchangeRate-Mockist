@@ -1,0 +1,41 @@
+<html>
+<body style="font-family: monospace;">
+<div style="white-space: pre;background-color: #EEF4ED;">using System;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">using System.Net.Http;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">using System.Threading.Tasks;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">using api.Models;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">using Newtonsoft.Json;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">namespace api.Services</div>
+<div style="white-space: pre;background-color: #EEF4ED;">{</div>
+<div style="white-space: pre;background-color: #EEF4ED;">    public class BotService</div>
+<div style="white-space: pre;background-color: #EEF4ED;">    {</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        private static HttpClient _client;</div>
+<div style="white-space: pre;background-color: #EEF4ED;"> </div>
+<div style="white-space: pre;background-color: #D2EACE;">        public BotService(HttpClient httpClient)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            _client = httpClient;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        public double GetSellingAverageDay(string date)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            string currency = &quot;USD&quot;;</div>
+<div style="white-space: pre;background-color: #D2EACE;">            string url = &quot;https://iapi.bot.or.th/Stat/Stat-ExchangeRate/DAILY_AVG_EXG_RATE_V1/?start_period=&quot;+date+&quot;&amp;end_period=&quot;+date+&quot;&amp;currency=&quot;+currency;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #D2EACE;">            RootObject result = CallGet(url).Result;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #D2EACE;">            return Double.Parse(result.result.data.data_detail[0].selling);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        public async Task&lt;RootObject&gt; CallGet(string url)</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        {</div>
+<div style="white-space: pre;background-color: #D2EACE;">            _client.DefaultRequestHeaders.Add(&quot;api-key&quot;, &quot;U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm&quot;);</div>
+<div style="white-space: pre;background-color: #D2EACE;">            var response = await _client.GetStringAsync(url);</div>
+<div style="white-space: pre;background-color: #D2EACE;">            var repositories = JsonConvert.DeserializeObject&lt;RootObject&gt;(response);</div>
+<div style="white-space: pre;background-color: #EEF4ED;">&nbsp;</div>
+<div style="white-space: pre;background-color: #D2EACE;">            return repositories;</div>
+<div style="white-space: pre;background-color: #EEF4ED;">        }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">    }</div>
+<div style="white-space: pre;background-color: #EEF4ED;">}</div>
+</body>
+</html>

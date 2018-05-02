@@ -1,0 +1,404 @@
+{
+  "SourcePath": "/Users/ifew/www_customer/easybuy/dojo/BotExchangeRate_Mockist/",
+  "HitsFile": "/Users/ifew/www_customer/easybuy/dojo/BotExchangeRate_Mockist/tests/api.UnitTest.Result/coverage-hits.txt",
+  "ExtraAssemblies": [
+    "/Users/ifew/www_customer/easybuy/dojo/BotExchangeRate_Mockist/tests/api.UnitTest/bin/Debug/netcoreapp2.0/dotnet-minicover.dll"
+  ],
+  "Assemblies": [
+    {
+      "Name": "api",
+      "SourceFiles": {
+        "src/api/Services/BotService.cs": {
+          "Instructions": [
+            {
+              "Id": 1,
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 9,
+              "EndColumn": 49,
+              "Class": "api.Services.BotService",
+              "Method": ".ctor",
+              "MethodFullName": "System.Void api.Services.BotService::.ctor(System.Net.Http.HttpClient)",
+              "Instruction": "IL_0000: ldarg "
+            },
+            {
+              "Id": 2,
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 13,
+              "EndColumn": 34,
+              "Class": "api.Services.BotService",
+              "Method": ".ctor",
+              "MethodFullName": "System.Void api.Services.BotService::.ctor(System.Net.Http.HttpClient)",
+              "Instruction": "IL_0008: ldarg httpClient"
+            },
+            {
+              "Id": 3,
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 13,
+              "EndColumn": 37,
+              "Class": "api.Services.BotService",
+              "Method": "GetSellingAverageDay",
+              "MethodFullName": "System.Double api.Services.BotService::GetSellingAverageDay(System.String)",
+              "Instruction": "IL_0001: ldstr \"USD\""
+            },
+            {
+              "Id": 4,
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 13,
+              "EndColumn": 158,
+              "Class": "api.Services.BotService",
+              "Method": "GetSellingAverageDay",
+              "MethodFullName": "System.Double api.Services.BotService::GetSellingAverageDay(System.String)",
+              "Instruction": "IL_0007: ldc.i4 6"
+            },
+            {
+              "Id": 5,
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 13,
+              "EndColumn": 53,
+              "Class": "api.Services.BotService",
+              "Method": "GetSellingAverageDay",
+              "MethodFullName": "System.Double api.Services.BotService::GetSellingAverageDay(System.String)",
+              "Instruction": "IL_0037: ldarg "
+            },
+            {
+              "Id": 6,
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 13,
+              "EndColumn": 76,
+              "Class": "api.Services.BotService",
+              "Method": "GetSellingAverageDay",
+              "MethodFullName": "System.Double api.Services.BotService::GetSellingAverageDay(System.String)",
+              "Instruction": "IL_0044: ldloc V_2"
+            },
+            {
+              "Id": 7,
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 13,
+              "EndColumn": 104,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_000f: ldsfld System.Net.Http.HttpClient api.Services.BotService::_client"
+            },
+            {
+              "Id": 8,
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 13,
+              "EndColumn": 62,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_0029: ldsfld System.Net.Http.HttpClient api.Services.BotService::_client"
+            },
+            {
+              "Id": 9,
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 13,
+              "EndColumn": 84,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_00ab: ldarg "
+            },
+            {
+              "Id": 10,
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 13,
+              "EndColumn": 33,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_00bc: ldarg "
+            },
+            {
+              "Id": 11,
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 13,
+              "EndColumn": 104,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_000f: ldsfld System.Net.Http.HttpClient api.Services.BotService::_client"
+            },
+            {
+              "Id": 12,
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 13,
+              "EndColumn": 62,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_0029: ldsfld System.Net.Http.HttpClient api.Services.BotService::_client"
+            },
+            {
+              "Id": 13,
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 13,
+              "EndColumn": 84,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_00ab: ldarg "
+            },
+            {
+              "Id": 14,
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 13,
+              "EndColumn": 33,
+              "Class": "api.Services.BotService/<CallGet>d__3",
+              "Method": "MoveNext",
+              "MethodFullName": "System.Void api.Services.BotService/<CallGet>d__3::MoveNext()",
+              "Instruction": "IL_00bc: ldarg "
+            }
+          ]
+        },
+        "src/api/Services/ExchangeRateService.cs": {
+          "Instructions": [
+            {
+              "Id": 15,
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 9,
+              "EndColumn": 36,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": ".ctor",
+              "MethodFullName": "System.Void api.Services.ExchangeRateService::.ctor(System.Net.Http.HttpClient)",
+              "Instruction": "IL_0000: ldarg "
+            },
+            {
+              "Id": 16,
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 9,
+              "EndColumn": 58,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": ".ctor",
+              "MethodFullName": "System.Void api.Services.ExchangeRateService::.ctor(System.Net.Http.HttpClient)",
+              "Instruction": "IL_000f: ldarg "
+            },
+            {
+              "Id": 17,
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 13,
+              "EndColumn": 34,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": ".ctor",
+              "MethodFullName": "System.Void api.Services.ExchangeRateService::.ctor(System.Net.Http.HttpClient)",
+              "Instruction": "IL_0017: ldarg httpClient"
+            },
+            {
+              "Id": 18,
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 13,
+              "EndColumn": 61,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "GetSellingPrice",
+              "MethodFullName": "System.Void api.Services.ExchangeRateService::GetSellingPrice(System.String)",
+              "Instruction": "IL_0001: ldsfld System.Net.Http.HttpClient api.Services.ExchangeRateService::_client"
+            },
+            {
+              "Id": 19,
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 13,
+              "EndColumn": 69,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "GetSellingPrice",
+              "MethodFullName": "System.Void api.Services.ExchangeRateService::GetSellingPrice(System.String)",
+              "Instruction": "IL_000c: ldarg "
+            },
+            {
+              "Id": 20,
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 13,
+              "EndColumn": 35,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "ExchangeRate",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::ExchangeRate(System.Double,System.String)",
+              "Instruction": "IL_0001: ldarg "
+            },
+            {
+              "Id": 21,
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 13,
+              "EndColumn": 37,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "ExchangeRate",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::ExchangeRate(System.Double,System.String)",
+              "Instruction": "IL_0009: ldarg inputAmountUSD"
+            },
+            {
+              "Id": 22,
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 17,
+              "EndColumn": 71,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "ExchangeRate",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::ExchangeRate(System.Double,System.String)",
+              "Instruction": "IL_001d: ldarg inputAmountUSD"
+            },
+            {
+              "Id": 23,
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 17,
+              "EndColumn": 54,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "ExchangeRate",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::ExchangeRate(System.Double,System.String)",
+              "Instruction": "IL_0026: ldarg "
+            },
+            {
+              "Id": 24,
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 17,
+              "EndColumn": 65,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "ExchangeRate",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::ExchangeRate(System.Double,System.String)",
+              "Instruction": "IL_002e: ldarg "
+            },
+            {
+              "Id": 25,
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 17,
+              "EndColumn": 26,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "ExchangeRate",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::ExchangeRate(System.Double,System.String)",
+              "Instruction": "IL_003a: ldc.r8 0"
+            },
+            {
+              "Id": 26,
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 13,
+              "EndColumn": 70,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "CalculateAmountWithFee",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::CalculateAmountWithFee(System.Double,System.Double)",
+              "Instruction": "IL_0001: ldarg inputAmount"
+            },
+            {
+              "Id": 27,
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 13,
+              "EndColumn": 55,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "CalculateAmountWithFee",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::CalculateAmountWithFee(System.Double,System.Double)",
+              "Instruction": "IL_0007: ldarg "
+            },
+            {
+              "Id": 28,
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 13,
+              "EndColumn": 36,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "_GetFee",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::_GetFee(System.Double)",
+              "Instruction": "IL_0001: ldarg inputAmount"
+            },
+            {
+              "Id": 29,
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 17,
+              "EndColumn": 31,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "_GetFee",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::_GetFee(System.Double)",
+              "Instruction": "IL_0015: ldc.r8 0.025"
+            },
+            {
+              "Id": 30,
+              "StartLine": 49,
+              "EndLine": 49,
+              "StartColumn": 18,
+              "EndColumn": 62,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "_GetFee",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::_GetFee(System.Double)",
+              "Instruction": "IL_0021: ldarg inputAmount"
+            },
+            {
+              "Id": 31,
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 17,
+              "EndColumn": 31,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "_GetFee",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::_GetFee(System.Double)",
+              "Instruction": "IL_0044: ldc.r8 0.0215"
+            },
+            {
+              "Id": 32,
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 17,
+              "EndColumn": 31,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "_GetFee",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::_GetFee(System.Double)",
+              "Instruction": "IL_0051: ldc.r8 0.02"
+            },
+            {
+              "Id": 33,
+              "StartLine": 61,
+              "EndLine": 61,
+              "StartColumn": 13,
+              "EndColumn": 108,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "_RoundCeiling2Digit",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::_RoundCeiling2Digit(System.Double)",
+              "Instruction": "IL_0001: ldarg number"
+            },
+            {
+              "Id": 34,
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 13,
+              "EndColumn": 27,
+              "Class": "api.Services.ExchangeRateService",
+              "Method": "_RoundCeiling2Digit",
+              "MethodFullName": "System.Double api.Services.ExchangeRateService::_RoundCeiling2Digit(System.Double)",
+              "Instruction": "IL_0023: ldloc V_0"
+            }
+          ]
+        }
+      },
+      "Locations": [
+        {
+          "File": "/Users/ifew/www_customer/easybuy/dojo/BotExchangeRate_Mockist/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.dll",
+          "BackupFile": "/Users/ifew/www_customer/easybuy/dojo/BotExchangeRate_Mockist/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.uninstrumented.dll",
+          "PdbFile": "/Users/ifew/www_customer/easybuy/dojo/BotExchangeRate_Mockist/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.pdb",
+          "BackupPdbFile": "/Users/ifew/www_customer/easybuy/dojo/BotExchangeRate_Mockist/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.uninstrumented.pdb"
+        }
+      ]
+    }
+  ]
+}
